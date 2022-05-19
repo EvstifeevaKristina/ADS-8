@@ -6,13 +6,13 @@ class Train {
  private:
   struct Cage {
     bool light; // состояние лампочки
-    int sTr = 0;
     Cage *next;
     Cage *prev;
-    Cage *tail;
   };
+  int sTr = 0;
   int countOp; // счетчик шагов (число переходов из вагона в вагон)
   Cage *first; // точка входа в поезд (первый вагон)
+  Cage *tail;
  public:
   Train() :first(nullptr), tail(nullptr), countOp(0) {}
   void addCage(bool light); // добавить вагон с начальным состоянием лампочки
